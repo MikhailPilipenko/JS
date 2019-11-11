@@ -145,16 +145,16 @@
 // function hello() {
 //   console.log(this.name + this.surname)
 // }
-
-const user = {
-  name:"Igor",
-  surname:"Smith",
-  }
-
-  const user2 = {
-    name:"Igor2",
-    surname:"Smith2",
-    }
+//
+//const user = {
+//  name:"Igor",
+//  surname:"Smith",
+//  }
+//
+//  const user2 = {
+//    name:"Igor2",
+//    surname:"Smith2",
+//    }
 //--------------------------------------------111111
 // user.sayHello = function(){
 //   console.log('Привет я ' + this.name + this.surname)
@@ -192,11 +192,11 @@ const user = {
 // console.log(sayHello.apply(user, ['Sensey', '']));
 
 //------------------------------------------------444 bind
-function sayHello(greeting, gender){
-  return this.name + " " + this.surname
-}
-let a = sayHello.bind(user);
-console.log(a());
+//function sayHello(greeting, gender){
+//  return this.name + " " + this.surname
+//}
+//let a = sayHello.bind(user);
+//console.log(a());
 
 
 //---------------------------- new
@@ -212,18 +212,72 @@ console.log(a());
 // console.log(bmw.engine);
 
 //------------------------------------------
-class CarFactory{
-  constructor(model, age){
-    this.model = model;
-    this.age = age
-  }
-
-  getCar(){
-    console.log(this.age + this.model);
-  }
-
-}
-let bmw = new CarFactory('BMW 5', 1);
-console.log(bmw);
+//class CarFactory{
+//  constructor(model, age){
+//    this.model = model;
+//    this.age = age
+//  }
+//
+//  getCar(){
+//    console.log(this.age + this.model);
+//  }
+//
+//}
+//let bmw = new CarFactory('BMW 5', 1);
+//console.log(bmw);
 
 //----------------------------------------------
+var slides = document.querySelectorAll('#slides .slide');
+//console.log(slides);
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,1500);
+
+function nextSlide(){
+//    console.log(currentSlide, 'before');
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+}   
+//function prevSlide(){
+//    slides[currentSlide].className = 'slide';
+//    if(currentSlide == 0){
+//        current
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
