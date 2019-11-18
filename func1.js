@@ -1,3 +1,5 @@
+// jQuery sdn-----------------------------------------------
+
 let a = $('.b')
     .css('border', '3px solid red')
     .addClass('some')
@@ -13,7 +15,52 @@ $('.block').click(function(){
 });
 
 
+$('#test').click(function(){
+    $(this).css({'backgroundColor' : 'red'});
+   $('#menu').css({'display' : 'inline'}); 
+});
 
+
+
+// jQuery sdn-----------------------------------------------
+
+
+// Замыкание -------------------------------------------------
+
+//function makeCounter() {
+//  let count = 0;
+//  return function() {
+//    return count++;
+////      console.log(count);
+//  };
+//}
+//
+//let counter = makeCounter();
+//
+//console.log(counter());
+//console.log(counter());
+//console.log(counter());
+//console.log(counter());
+
+// Замыкание -------------------------------------------------
+
+// счётчик кликов===========================================
+
+//function makeCounter() {
+//  let count = 0;
+//  return function() {
+//    return count++;
+////      console.log(count);
+//  };
+//}
+//
+//let counter = makeCounter();
+//
+//document.body.addEventListener('click', () =>{
+//    console.log(counter());
+//})
+
+// счётчик кликов===========================================
 
 
 
