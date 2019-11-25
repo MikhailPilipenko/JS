@@ -245,18 +245,39 @@ function nextSlide(){
 //    }
 //}
 
+//$('.one').hide('10000');
+//
+//
+//$('.one').animate({
+// 'opacity':'show'
+//})
 
+//$('.two').animate({
+// 'opacity':0.5,
+// 'height':'50px',
+// 'width':'250px'
+//})
 
+$('.one').on('click', function(){
+             $('.one').hide('5000');
+             })
 
+$('.two').on('click', function(){
+             $('.one').show('2000');
+             })
+$('.four').on('click', function(){
+            $('.three').animate({
+            'opacity':'hide',
+            'duration':'fast'
+            })
+       })
 
+$( "div.demo" ).scrollLeft( 500 );
 
+$("div").after("<hr/>")
+    
 
-
-
-
-
-
-
+$('.one').height(300); 
 
 
 
