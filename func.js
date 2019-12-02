@@ -279,7 +279,37 @@ $("div").after("<hr/>")
 
 $('.one').height(300); 
 
+$('form').submit(function(){
+// чуть позже расскажу подробнее о AJAX
+$.post(
+$(this).attr('action'), // ссылка куда отправляем данные
+$(this).serialize(),// данные формы
+);
+63
+// отключаем действие по умолчанию
+return false;
+});
 
+
+//$("#content").load("./index1.html");
+// ========
+//$.ajax({
+//url: "./index1.html", // указываем URL и
+//dataType: "html", // тип загружаемых данных
+//success: function (data) {
+//// вешаем свой обработчик события success
+//$("#content").html(data)
+//}
+//});
+
+$.ajax({
+url: "https://randomuser.me/api/", // указываем URL и
+dataType: "json", // тип загружаемых данных
+success: function (data) {
+let imgPath = data.results[0].picture.medium
+$('#content').html(`<img src=${imgPath} />`)
+}
+});
 
 
 
